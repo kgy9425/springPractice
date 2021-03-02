@@ -1,5 +1,7 @@
 package com.example.springPractice.dto;
 
+import com.example.springPractice.entity.Article;
+
 public class ArticleForm {
 
     private String title;
@@ -14,5 +16,9 @@ public class ArticleForm {
     public String toString(){
         return "ArticleForm{" +
                 "title='" + title + '\'' + ", content='" + content + '\'' + '}';
+    }
+
+    public Article toEntity() {
+        return new Article(null, title, content);
     }
 }
